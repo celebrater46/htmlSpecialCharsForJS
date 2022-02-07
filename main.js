@@ -3,7 +3,7 @@
 const chars = ["&", '"', "'", "<", ">"];
 
 // https://www.petitmonte.com/javascript/htmlspecialchars.html
-function htmlspecialchars(str){
+function h(str){
     return (str + '').replace(/&/g,'&amp;')
         .replace(/"/g,'&quot;')
         .replace(/'/g,'&#039;')
@@ -16,7 +16,7 @@ const lis = document.querySelectorAll("ul#ul li");
 
 let i = 0;
 chars.forEach(char => {
-    lis[i].innerHTML = htmlspecialchars(char);
+    lis[i].innerHTML = h(char);
    // console.log(lis[i].innerText);
    i++;
 });
